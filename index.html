@@ -1,0 +1,164 @@
+
+<!-- template.html -->
+
+    <title>State Demography Office - Net Migration by Age</title>
+ <link type="text/css" rel="stylesheet" href="common.css" />
+    <link type="text/css" rel="stylesheet" href="layout.css" />
+    <link type="text/css" rel="stylesheet" href="meanmenu.css" />
+
+        <meta name="author" content="State of Colorado" />
+        <meta name="description" content="Colorado Department of Local Affairs" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="viewport" content="width=device-width" />
+            <!--[if lt IE 9]>
+            <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('hgroup');
+            document.createElement('@media');
+            </script>
+            <![endif]-->
+    
+      <script type="text/javascript" src="jquery.meanmenu.js"></script>
+    <script type="text/javascript" src="gtranslate.js"></script>    
+    
+            <script type="text/javascript">
+
+            jQuery(document).ready(function () {
+                jQuery('header nav').meanmenu();
+            });
+        </script> 
+
+        
+   {{ headContent() }}
+    {{ bootstrapLib() }}
+
+  
+  
+
+        <div id="top-bar-wrapper">
+          <div id="top-bar-left">
+              <a href="https://www.colorado.gov" rel="home" title="Colorado The Official Web Portal">
+                <img id="logo" src="img/co_state_web_portal_reverse_white.png" alt="Colorado The Official Web Portal" />
+              </a>
+
+            </div>
+          
+          
+        
+                        <div id="top-bar-right">
+<nav id="gtranslate-wrapper">
+                    <button class="translate-toggle">
+                        Translate
+                    </button>
+                    <div class="translate-content">
+                        <div id="google_translate_element"></div>
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false, includedLanguages: 'en,af,sq,ar,hy,az,eu,be,bg,ca,zh-CN,zh-TW,hr,cs,da,nl,et,tl,fi,fr,gl,ka,de,el,ht,iw,hi,hu,is,id,ga,it,ja,ko,lv,lt,mk,ms,mt,no,fa,pl,pt,ro,ru,sr,sk,sl,es,sw,sv,th,tr,uk,ur,vi,cy,yi'}, 'google_translate_element');
+                            }
+                        </script>
+                        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                        </script>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="page-wrapper">
+            <div id="page-wrapper-inner">
+                <header id="header">
+                    <div id="header-name">
+                        <h1 id="site-name">
+                            <a href="https://www.colorado.gov/pacific/dola" title="Home" rel="home">
+                                <span>DOLA</span>
+                            </a>
+                        </h1>
+                    </div>
+
+                  <a href="https://dola.colorado.gov"><img id="banner" src="img/dola-banner.png" alt="Colorado Department of Local Affairs" /></a>
+
+                    <nav id="top-navigation-wrapper">
+                        <ul id="top-navigation-list" class="sm sm-simple">
+                            <li class="padding-normal">
+                                <a href="http://demography.dola.colorado.gov/">Home</a></li> 
+                            <li class="padding-normal">
+                                <a href="http://demography.dola.colorado.gov/population/">Population</a></li>
+                            <li class="padding-normal">
+                                <a href="http://demography.dola.colorado.gov/births-deaths-migration/">Births, Deaths, Migration</a></li>
+                            <li class="padding-normal">
+                                <a href="http://demography.dola.colorado.gov/economy-labor-force/">Economy &amp; Labor Force</a></li>
+                            <li class="padding-normal">
+                                <a href="http://demography.dola.colorado.gov/housing-and-households/">Housing &amp; Households</a></li>
+                            <li class="padding-normal">
+                                <a href="http://demography.dola.colorado.gov/census-acs/">Census &amp; ACS</a></li>
+                        </ul>
+                    </nav>
+                  
+                </header>
+              
+              
+                <section id="content" role="main">
+                    <div id="main-content">
+                      <h1>State Demography Office - Net Migration by Age Comparison</h1>
+                      <span style="font-weight: bold;">INSTRUCTIONS:</span>
+                      <br>
+                      <p>The following page shows graphs and charts for various datasets by county. Select the county from the list below to view the graphs for that county. All graphs are interactive and you are able to zoom in and out on any area of each graph by drawing boxes around the area you would to view with your mouse. To zoom back out, simply double click on any area of the graph. You can also hover over specific data points on each graph to view the data for that specific point.</p>
+                      <p> For your convenience, you are able to download the graphs by clicking on the camera icon in the upper right of the graph while hovering over the chart.  This will download an exact copy, including zooming, of  the chart on the page.</p>
+                      <p>You are able to download the raw data for each chart by clicking on the "Download Data (CSV) button below the chart.</p>
+                      <hr>
+                      {{county}}
+                      <hr>
+                        <br>
+                      {{net_mig_plot}}
+                      {{net_mig_dl}}
+                      <br>
+                      <br>
+                      {{net_share_plot}}
+                      {{net_share_dl}}
+                      <br>
+                      </div>
+                      </div>
+                </section>
+            </div>
+        </div>
+<footer id="footer">
+
+          
+          
+  <div id="aboutleft">
+    <a href="/information.html" target="_blank">About the State Demography Office</a> | 
+    <a href="/contact.html" target="_blank">Contact Us</a> | 
+    <a href="/search.html" target="_blank">Search Demography</a>
+  </div> 
+          
+  <div id="aboutright">
+    <a href="https://www.colorado.gov/pacific/dola/node/120196" target="_blank">About DOLA</a> | 
+    <a href="https://www.colorado.gov/pacific/dola/node/120201" target="_blank">Careers @ DOLA</a> | 
+    <a href="https://www.colorado.gov/pacific/dola/node/107101" target="_blank">Contact DOLA</a>
+  </div>
+
+    
+    
+                <div id="coloradolegal">
+
+                <a href="https://www.colorado.gov/" target="_blank">&copy; 
+                    <script type="text/javascript">
+                        var today = new Date();
+                        var year = today.getFullYear();
+                        document.write(year);
+                    </script> 
+                    State of Colorado
+                </a> | 
+                <a href="https://www.colorado.gov/apps/oit/transparency/index.html" target="_blank">Transparency Online</a> | 
+                <a href="https://www.colorado.gov/accessibility-standards" target="_blank">Accessibility</a>
+            </div>
+
+        </footer>
+
+
