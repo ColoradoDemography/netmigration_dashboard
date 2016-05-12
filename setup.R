@@ -19,8 +19,8 @@ mig_age_p=function(fips){
     filter(FIPS==fips)
   
   plot_ly(data, x=FiveYearAgeGroups, y=NetMig9500, line=list(color = "rgb(31,74,126)"), name="1995 to 2000")%>%
-    add_trace(y=NetMig0010, line=list(color="rgb(0,149,58)", width=2.5, dash="dash"), name= "2000 to 2010")%>%
-    add_trace(y=NetMig1020, line=list(color="rgb(239,117,33)", width=2.5, dash="dot"), name= "2010 to 2020")%>%
+    add_trace(x=FiveYearAgeGroups, y=NetMig0010, line=list(color="rgb(0,149,58)", width=2.5, dash="dash"), name= "2000 to 2010")%>%
+    add_trace(x=FiveYearAgeGroups, y=NetMig1020, line=list(color="rgb(239,117,33)", width=2.5, dash="dot"), name= "2010 to 2020")%>%
     layout(
       title="Net Migration by Age - Net Migrants",
       xaxis=list(
