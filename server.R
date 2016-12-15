@@ -19,7 +19,7 @@ mig_age_p=function(fips){
     filter(FIPS==fips)
   
   p=plot_ly(data=data, x= ~FiveYearAgeGroups, y=~NetMig9500, type="scatter", line=list(color = "rgb(31,74,126)"), name="1995 to 2000")
-    p=add_trace(p,x=~FiveYearAgeGroups, y=~NetMig0010, line=list(color="rgb(239,117,33)", width=2.5, dash="dash"), name= "2000 to 2010")
+    p=add_trace(p, x=~FiveYearAgeGroups, y=~NetMig0010, line=list(color="rgb(239,117,33)", width=2.5, dash="dash"), name= "2000 to 2010")
     p=add_trace(p,x=~FiveYearAgeGroups, y=~NetMig1020, line=list(color="rgb(0,149,58)", width=2.5, dash="dot"), name= "2010 to 2020")
     p=layout(p,
       barmode="stacked",
@@ -55,9 +55,9 @@ mig_share_p=function(fips){
     mutate(FIPS=as.numeric(FIPS))%>%
     filter(FIPS==fips)
   
-  p= plot_ly(data, x=~FiveYearAgeGroups, y=~1000*as.numeric(Rate9500), type="scatter",line=list(color = "rgb(31,74,126)"), name="1995 to 2000")
-  p=  add_trace(p,data, x=~FiveYearAgeGroups, y=~1000*as.numeric(Rate0010),  line=list(color="rgb(239,117,33)", width=2.5, dash="dash"), name= "2000 to 2010")
-  p=  add_trace(p,data, x=~FiveYearAgeGroups, y=~1000*as.numeric(Rate1020),  line=list(color="rgb(0,149,58)", width=2.5, dash="dot"), name= "2010 to 2020")
+  p= plot_ly(data=data, x=~FiveYearAgeGroups, y=~1000*as.numeric(Rate9500), type="scatter",line=list(color = "rgb(31,74,126)"), name="1995 to 2000")
+  p=  add_trace(p, x=~FiveYearAgeGroups, y=~1000*as.numeric(Rate0010),  line=list(color="rgb(239,117,33)", width=2.5, dash="dash"), name= "2000 to 2010")
+  p=  add_trace(p, x=~FiveYearAgeGroups, y=~1000*as.numeric(Rate1020),  line=list(color="rgb(0,149,58)", width=2.5, dash="dot"), name= "2010 to 2020")
   p=  layout(p,
       title="Net Migration by Age - Rates", 
       xaxis=list(
