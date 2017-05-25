@@ -3,7 +3,7 @@ library(tidyr)
 library(plotly)
 library(scales)
 
-
+options(shiny.sanitize.errors = TRUE)
 county_choices=read.csv("county_names.csv", stringsAsFactors = FALSE)%>%
   select(county)
 
