@@ -113,7 +113,7 @@ county=reactive({filter(read.csv("county_names.csv"), county==input$county)%>%
 
 output$netMigAgeShare=renderPlotly({mig_share_p(county())})
 
-nm__share_data=reactive({mig_share_d(county())})
+nm_share_data=reactive({mig_share_d(county())})
 
 output$netMigAgeDataShare=downloadHandler(
   filename= function(){
